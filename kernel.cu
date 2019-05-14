@@ -26,7 +26,7 @@ void add(int *a, int *b, int *c)
 
 	//addVect <<<1, N >>> (dev_a, dev_b, dev_c);
 	//addVect <<<1, 1>>> (dev_a, dev_b, dev_c);
-	addVect << <N, 1 >> > (dev_a, dev_b, dev_c);
+	addVect <<<N, 1 >>> (dev_a, dev_b, dev_c);
 
 	cudaDeviceSynchronize();
 	cudaMemcpy(c, dev_c, N * sizeof(int), cudaMemcpyDeviceToHost);
