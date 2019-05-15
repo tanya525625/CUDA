@@ -6,9 +6,15 @@
 
 __global__ void addVect(int *a, int *b, int *c)
 {
-	//int i = threadIdx.x;
-	int i = blockIdx.x;
-	c[i] = a[i] + b[i];
+        //for <<<1, N>>>
+        //int i = threadIdx.x;
+
+        //for <<<N,1>>>
+        //int i = blockIdx.x;
+
+        //for <<<1, 1>>>
+        for (int i = 0; i < N; i++)
+                c[i] = a[i] + b[i];
 }
 
 void add(int *a, int *b, int *c)
