@@ -10,10 +10,10 @@ __global__ void addVect(int *a, int *b, int *c)
         //int i = threadIdx.x;
 
         //for <<<N,1>>>
-        //int i = blockIdx.x;
+        int i = blockIdx.x;
 
         //for <<<1, 1>>>
-        for (int i = 0; i < N; i++)
+        //for (int i = 0; i < N; i++)
                 c[i] = a[i] + b[i];
 }
 
