@@ -38,7 +38,7 @@ void add(int *a, int *b, int *c)
 	cudaMemcpy(c, dev_c, N * sizeof(int), cudaMemcpyDeviceToHost);
 
 }
-int main(void)
+int main()
 {
 	int a[N], b[N], c[N];
 	for (int i = 0; i < N; i++)
